@@ -1,0 +1,280 @@
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #CED28C;
+			text-align: center;
+			margin: 0 auto;
+		}
+
+		#presentation {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			background-color: #55572B;
+			background-image: url('http://static.comicvine.com/uploads/original/12/126722/2866081-The_Fairy_Woods_2_by_midnightstouchSTOCK.jpg');
+			justify-content: space-around;
+			padding: 10px;
+		}
+
+		#presentation > div {
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+		}
+
+		.combattant {
+			margin: 10px;
+			padding: 20px;
+			border: 1px solid #55572B;
+			background-color: rgba(255, 255, 255, 0.4);
+		}
+
+		.Aerelloth, .Hattie, .Anah, .Mallaur, .Sullaur, .Mellinda, .Piperine, .Bloma {
+			background-repeat: no-repeat;
+		}
+
+		.Aerelloth {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/aerelloth.jpg');
+			background-position: -50px -160px;
+		}
+
+		.Aerelloth h2 {
+			font-size: 1.2em;
+		}
+		.Hattie {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/hattie.jpg');
+			background-size: 300px;
+			background-position: -20px 0;
+		}
+			
+		.Anah {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/anah.jpg');
+			background-position: 0 -160px;
+		}
+			
+		.Mallaur {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/mallaur.jpg');
+			background-position: -40px -30px;
+		}
+			
+		.Sullaur {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/sllaur.jpg');
+			background-size: 300px;
+			background-position: -10px 0;
+		}
+
+		.Mellinda {
+			background-image: url('http://aerelloth.unblog.fr/files/2011/07/mellinda.jpg');
+			background-size: 300px;
+			background-position: -20px -10px;
+		}
+	
+		.Piperine {
+			background-image: url('https://s-media-cache-ak0.pinimg.com/236x/40/93/5d/40935da2d5ca51b86061dd4774162a3c.jpg');
+			background-size: 300px;
+			background-position: -10px -50px;
+		}
+
+		.Bloma {
+			background-image: url('https://lotrostylist.files.wordpress.com/2012/08/lotro-outfit-118d.jpg');
+			background-position: -50px 0;
+			background-size: 350px;
+		}
+				
+		#combat h2 {
+			font-size: 2em;
+			background-color: #E7E7B8;
+			border: 2px solid #55572B;
+			padding: 5px;
+			width: 80%;
+			margin: 20px auto;
+			-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+		}
+
+		#combat p {
+			background-color: #F6F8D6;
+			width: 60%;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			padding: 20px;
+			-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+			-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+		}
+
+		button {
+			border: 2px solid #55572b;
+			background-color: #e7e7b8;
+			margin-bottom: 20px;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
+
+		/***********************[ RESPONSIVE ]*************************/
+
+		@media screen and (max-width:1300px){
+		  .combattant {
+		    padding: 10px;
+		    display: -webkit-flex;
+		    display: -moz-flex;
+		    display: -ms-flex;
+		    display: -o-flex;
+		    display: flex;
+		    flex-direction: column;
+		    justify-content: space-around;
+		    align-items: center;
+		  }
+
+		  .combattant h1 {
+		    font-size: 25px;
+		    margin: 10px auto;
+		  }
+
+		  .combattant h2 {
+		    font-size: 16px;
+			margin: 8px auto;
+		  }
+
+		  .combattant h3 {
+		  	margin: 5px auto;
+		  	font-size: 16px;
+		  }
+
+		  .combattant p {
+		  	margin: 5px auto;
+		  	font-size: 12px;
+		  }
+
+		  .Aerelloth {
+		  	background-position: -70px -180px;
+		  }
+
+		  .Hattie {
+		  	background-position: -50px 0;
+		  }
+		  	
+		  .Anah {
+		  	background-position: -25px -190px;
+		  }
+		  	
+		  .Mallaur {
+		  	background-position: -70px -30px;
+		  }
+		  	
+		  .Sullaur {
+		  	background-position: -40px 0;
+		  }
+
+		  .Mellinda {
+		  	background-position: -40px -10px;
+		  }
+		  
+		  .Piperine {
+		  	background-position: -40px -50px;
+		  }
+
+		  .Bloma {
+		  	background-position: -80px 0;
+		  }
+		}
+
+		@media screen and (max-width:1100px){
+		  .Aerelloth, .Hattie, .Anah, .Mallaur, .Sullaur, .Mellinda, .Piperine, .Bloma {
+				width: 200px;
+				height: 200px;
+		  }
+		  .combattant {
+		  	width: 180px;
+		  	height: 180px;
+		  }
+
+		  .combattant p {
+		  	font-size: 10px;
+		  }
+		}
+
+		@media screen and (max-width:1000px){
+		  .Aerelloth, .Hattie, .Anah, .Mallaur, .Sullaur, .Mellinda, .Piperine, .Bloma {
+				width: 150px;
+				height: 150px;
+		  }
+		  .combattant {
+		  	width: 130px;
+		  	height: 130px;
+		  }
+
+		  .combattant p {
+		  	font-size: 10px;
+		  }
+
+		  .combattant h1 {
+		    font-size: 20px;
+		    margin: 0 auto;
+		  }
+
+		  .combattant h2 {
+		    font-size: 14px;
+		  	margin: 0 auto;
+		  }
+
+		  .Aerelloth h2 {
+		    font-size: 12px;
+		  	margin: 0 auto;
+		  }
+
+		  .combattant h3 {
+		    margin: 0 auto;
+		    font-size: 14px;
+		  }
+
+		  .combattant p {
+		    margin: 0 auto;
+		    font-size: 10px;
+		  }
+
+		  .Aerelloth {
+		  	background-position: -90px -180px;
+		  }
+
+		  .Hattie {
+		  	background-position: -35px 0;
+		  	background-size: 220px;
+		  }
+		  	
+		  .Anah {
+		  	background-position: -45px -190px;
+		  }
+		  	
+		  .Mallaur {
+		  	background-position: -90px -30px;
+		  }
+		  	
+		  .Sullaur {
+		  	background-position: -60px 0;
+		  }
+
+		  .Mellinda {
+		  	background-position: -30px -10px;
+		  	background-size: 220px;
+		  }
+		  
+		  .Piperine {
+		  	background-position: -70px -50px;
+		  }
+
+		  .Bloma {
+		  	background-position: -110px -20px;
+		  }
+		}
+
+		@media screen and (max-width:800px){
+		  #presentation {
+		  	flex-wrap: wrap;
+		  }
+		}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>A l'attaque !</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id='presentation'>
+		<?php foreach ($combattants as $combattant) : ?>
+		<div class="<?= $combattant -> getNom() ?>">
+			<div class='combattant'>
+				<h1><?= $combattant -> getNom() ?></h1>
+				<h2>~ <?= $combattant -> getClasse() ?> ~</h2>
+				<p>PV : <?= $combattant -> getPV() ?>, force : <?= $combattant -> getForce() ?></p>
+				<h3><?= $combattant -> getArme() -> getNomArme(); ?></h3>
+				<p>Puissance : <?= $combattant -> getArme() -> getPuissance() ?>, précision : <?= $combattant -> getArme() -> getPrecision() ?></p>
+			</div>
+			</div>
+			<?php endforeach ?>
+	</div>
+	<div id="combat">
+		<h2>Que le combat commence !</h2>
+		<p><?php 
+		while ($nbreCombattants >1)
+			{
+				shuffle($combattants);
+				$attaquant = $combattants[0];
+				$ennemi = $combattants[1];
+				$attaquant -> getArme() -> attaqueArme($attaquant, $ennemi);
+
+				if ($ennemi -> getPV() == 0)
+				{
+					if (($key = array_search($ennemi, $combattants)) !== false) 
+					{
+					    unset($combattants[$key]);
+					    $nbreCombattants = count($combattants);
+					}
+				}
+			}?></p>
+		<h2><?=$attaquant -> getNom().' est le grand vainqueur !';?></h2>
+		<button id="reload">Nouveau round</button>
+	</div>
+	<script>
+	document.addEventListener('DOMContentLoaded', function()
+	{
+		var button = document.querySelector('#reload');
+		document.querySelector("#reload").onclick = function() {
+			location.reload(); 
+		};
+	});
+	</script>
+</body>
+</html>
